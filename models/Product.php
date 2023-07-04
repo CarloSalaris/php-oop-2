@@ -77,6 +77,10 @@ class Product {
         return $this -> price;
     }
     public function setPrice($price) {
+        
+        if ($price < 0) {
+            throw new Exception("Il prezzo non può essere negativo");
+        }
         $this -> price = $price;
     }
 
