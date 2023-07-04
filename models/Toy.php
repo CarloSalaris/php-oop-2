@@ -38,8 +38,8 @@ class Toy extends Product {
 
         return $this -> getProductInfo($number)
             
-            . "<br> Scadenza: " . $this -> getColor()
-            . "<br> Scadenza: " . $this -> getWeight() . " Kg";
+            . "<br> Colore: " . $this -> getColor()
+            . "<br> Peso: " . $this -> getWeight() . " Kg";
 
     }
 

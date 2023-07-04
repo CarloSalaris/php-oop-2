@@ -16,7 +16,7 @@ foreach ($food as $key => $value) {
 }
 
 foreach ($toys as $key => $toy) {
-    
-    echo $value -> getToysInfo($key + 1) . "<br><br>--------------------<br><br>";
+        
+    echo $toy -> getToysInfo($key + 1) . "<br><br>--------------------<br><br>";
 
 }

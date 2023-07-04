@@ -13,9 +13,12 @@ $catProds = new Category("Gatti", "cat Icon");
 
 //products
 $products = [
-    new Product("spazzola", "./img/CatDogBrush.jpg", 4.50, $dogProds, "prodotti"),
-    new Product("croccantini", "", 20.35, $catProds, "cibo"),
-    new Product("osso", "", 3.90, $dogProds, "giochi")
+    new Product("spazzola", "./img/CatDogBrush.jpg", 4.50, $dogProds, "prodotto"),
+    new Product("croccantini", "", 20.35, $catProds, "prodotto"),
+    new Product("osso", "", 3.90, $dogProds, "prodotto"),
+    new Toy("biscotti", "", 4.50, $dogProds, "gioco", "Blu", 1),
+    new Toy("croccantini", "", 20.35, $catProds, "gioco", "Rosso", 2),
+    new Toy("osso", "", 3.90, $dogProds, "gioco", "Verde", 3)
 ];
 
 //Estensioni products
