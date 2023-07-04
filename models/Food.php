@@ -5,11 +5,11 @@ class Food extends Product {
     private $expireDate;
 
     public function __construct(
-            $name, $imgSrc, $price, $category, $type,
+            $name, $imgSrc, $price, $category, $type, $weight,
             $expireDate
         ) {
 
-        parent :: __construct($name, $imgSrc, $price, $category, $type);
+        parent :: __construct($name, $imgSrc, $price, $category, $type, $weight);
         
         $this -> setExpireDate($expireDate);
     }

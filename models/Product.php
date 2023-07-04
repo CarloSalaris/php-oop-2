@@ -1,6 +1,29 @@
 <?php
 
+trait Weightable {
+
+    private $weight;
+
+    public function getWeight() {
+
+        return $this -> weight;
+    }
+    public function setWeight($weight) {
+
+        if ($weight <= 0) {
+
+            throw new Exception("Weight can't be negative");
+        }
+
+        $this -> weight = $weight;
+    }
+}
+
+
+
 class Product {
+
+    use Weightable;
 
     private $name;
     private $imgSrc;
@@ -9,7 +32,8 @@ class Product {
     
     private Category $category;
 
-    public function __construct($name, $imgSrc, $price, Category $category, $type) {
+    public function __construct($name, $imgSrc, $price, Category $category, $type,
+                                $weight) {
 
         $this -> setName($name);
         $this -> setImgSrc($imgSrc);
@@ -17,6 +41,8 @@ class Product {
         $this -> setType($type);
 
         $this -> setCategory($category);
+
+        $this -> setWeight($weight);
 
     }
 
@@ -28,7 +54,8 @@ class Product {
         . "<br> Prezzo: " . $this -> getPrice() . " Euro"
         . "<br> Categoria: " . $this -> getCategory() -> getCategName()
         . "<br> Icona: " . $this -> getCategory() -> getIcon()
-        . "<br> Tipo: " . $this -> getType();
+        . "<br> Tipo: " . $this -> getType()
+        . "<br> Peso: " . $this -> getWeight() . " Kg";
 
     }
 

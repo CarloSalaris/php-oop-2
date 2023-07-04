@@ -3,17 +3,15 @@
 class Toy extends Product {
 
     private $color;
-    private $weight;
 
     public function __construct(
-            $name, $imgSrc, $price, $category, $type,
-            $color, $weight
+            $name, $imgSrc, $price, $category, $type, $weight,
+            $color
         ) {
 
-        parent :: __construct($name, $imgSrc, $price, $category, $type);
+        parent :: __construct($name, $imgSrc, $price, $category, $type, $weight);
         
         $this -> setColor($color);
-        $this -> setWeight($weight);
     }
 
     public function getColor() {
@@ -38,8 +36,7 @@ class Toy extends Product {
 
         return $this -> getProductInfo($number)
             
-            . "<br> Colore: " . $this -> getColor()
-            . "<br> Peso: " . $this -> getWeight() . " Kg";
+            . "<br> Colore: " . $this -> getColor();
 
     }
 
