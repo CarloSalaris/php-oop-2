@@ -25,30 +25,110 @@
     <!-- TITOLO -->
     <h1 class="text-center my-4">AMICI CANI E GATTI</h1>
 
-    <!-- CARD-ROW -->
-    <div class="row">
 
+    <!-- CARD-ROW - PRODOTTI -->
+    <div class="row my-4">
+        
+        <!-- Tipo di prodotto -->
+        <h2>PRODOTTI</h2>
+
+        <?php foreach ($products as $key => $product) { ?>
         <!-- CARD -->
-        <div class="col col-md-3 p-2 border">
+        <div class="col-xs col-md-4 p-2">
             
-            <!-- immagine -->
-            <div class="img_container">
-                <img src="<?php echo $products[0] -> getImgSrc(); ?>" class="img-fluid" alt="immagine prodotto">
-            </div>
-
-            <!-- Info -->
-            <div>
-                <!-- nome prodotto -->
-                <h4><?php echo $products[0] -> getTitle(); ?></h4>
-                <!-- Categoria -->
-                <div><?php echo $products[0] -> getCategory() -> getIcon(); ?></div>
-                <!-- peso -->
-                <div><?php echo $products[0] -> getWeight(); ?> Kg</div>
-                <!-- prezzo -->
-                <div><?php echo $products[0] -> getPrice(); ?> Euro</div>
+            <div class="border">
+                <!-- immagine -->
+                <div class="img_container">
+                    <img src="<?php echo $product -> getImgSrc(); ?>" class="img-fluid" alt="immagine prodotto">
+                </div>
+                <!-- Info -->
+                <div class="p-3 ">
+                    <!-- nome prodotto -->
+                    <h4><?php echo $product -> getTitle(); ?></h4>
+                    <!-- Categoria -->
+                    <div>CONSIGLIATO PER: <?php echo $product -> getCategory() -> getIcon(); ?></div>
+                    <!-- peso -->
+                    <div>PESO: <?php echo $product -> getWeight(); ?> Kg</div>
+                    <!-- prezzo -->
+                    <div>PREZZO: <?php echo $product -> getPrice(); ?> Euro</div>
+                </div>
             </div>
 
         </div>
+
+        <?php } ?>
+
+    </div>
+
+    <!-- CARD-ROW - GIOCHI -->
+    <div class="row  my-4">
+        
+        <!-- Tipo di prodotto -->
+        <h2>GIOCHI</h2>
+
+        <?php foreach ($toys as $key => $toy) { ?>
+        <!-- CARD -->
+        <div class="col-xs col-md-4 p-2">
+            
+            <div class="border">
+                <!-- immagine -->
+                <div class="img_container">
+                    <img src="<?php echo $toy -> getImgSrc(); ?>" class="img-fluid" alt="immagine prodotto">
+                </div>
+                <!-- Info -->
+                <div class="p-3 ">
+                    <!-- nome prodotto -->
+                    <h4><?php echo $toy -> getTitle(); ?></h4>
+                    <!-- Categoria -->
+                    <div>CONSIGLIATO PER: <?php echo $toy -> getCategory() -> getIcon(); ?></div>
+                    <!-- peso -->
+                    <div>PESO: <?php echo $toy -> getWeight(); ?> Kg</div>
+                    <!-- colore -->
+                    <div>COLORE: <?php echo $toy -> getColor(); ?> </div>
+                    <!-- prezzo -->
+                    <div>PREZZO: <?php echo $toy -> getPrice(); ?> Euro</div>
+                </div>
+            </div>
+
+        </div>
+
+        <?php } ?>
+
+    </div>
+
+    <!-- CARD-ROW - CIBO -->
+    <div class="row  my-4">
+        
+        <!-- Tipo di prodotto -->
+        <h2>CIBO</h2>
+
+        <?php foreach ($food as $key => $value) { ?>
+        <!-- CARD -->
+        <div class="col-xs col-md-4 p-2">
+            
+            <div class="border">
+                <!-- immagine -->
+                <div class="img_container">
+                    <img src="<?php echo $value -> getImgSrc(); ?>" class="img-fluid" alt="immagine prodotto">
+                </div>
+                <!-- Info -->
+                <div class="p-3 ">
+                    <!-- nome prodotto -->
+                    <h4><?php echo $value -> getTitle(); ?></h4>
+                    <!-- Categoria -->
+                    <div>CONSIGLIATO PER: <?php echo $value -> getCategory() -> getIcon(); ?></div>
+                    <!-- data di scadenza -->
+                    <div>SCADENZA: <?php echo $value -> getExpireDate(); ?></div>
+                    <!-- peso -->
+                    <div>PESO: <?php echo $value -> getWeight(); ?> Kg</div>
+                    <!-- prezzo -->
+                    <div>PREZZO: <?php echo $value -> getPrice(); ?> Euro</div>
+                </div>
+            </div>
+
+        </div>
+
+        <?php } ?>
 
     </div>
 
