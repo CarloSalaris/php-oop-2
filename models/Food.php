@@ -23,4 +23,11 @@ class Food extends Product {
         $this -> expireDate = $expireDate;
     }
 
+    public function getFoodInfo($number) {
+
+        return $this -> getProductInfo($number)
+             . "<br> Scadenza: " . $this -> getExpireDate();
+
+    }
+
 }
