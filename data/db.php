@@ -14,6 +14,8 @@ require_once("./models/Toy.php");
 $dogProds = new Category("Cani", "<i class='fa-solid fa-dog'></i>");
 $catProds = new Category("Gatti", "<i class='fa-solid fa-cat'></i>");
 
+try {
+   
 //products
 $products = [
     new Product("spazzola", "./img/CatDogBrush.jpg", 4.49, $catProds, "prodotto", 0.2),
@@ -34,3 +36,7 @@ $toys = [
     new Toy("broccolo peluche", "img/broccoliCat.jpg", 3.90, $catProds, "gioco", 0.2, "verde")
 ];
 
+
+} catch (Exception $e) {
+   echo "<h2>Errore nel caricamento prodotto:" . $e -> getMessage() . "</h2>";
+}
