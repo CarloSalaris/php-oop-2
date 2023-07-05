@@ -1,9 +1,12 @@
 <?php
 
+require_once("./traits/Weightable.php");
+
 require_once("./models/Category.php");
 require_once("./models/Product.php");
 require_once("./models/Food.php");
 require_once("./models/Toy.php");
+
 
 
 
